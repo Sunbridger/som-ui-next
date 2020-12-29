@@ -1,0 +1,247 @@
+[
+    {
+        "name": "develop",
+        "alias": "开发指南",
+        "children": [
+            {
+                "name": "install",
+                "alias": "安装",
+                "path": "/introduction/install"
+            },
+            {
+                "name": "start",
+                "alias": "快速上手",
+                "path": "/introduction/start"
+            }
+        ]
+    },
+    {
+        "name": "components",
+        "alias": "组件",
+        "extendsRouter": [
+            {
+                "name": "components-develop",
+                "alias": "开发指南",
+                "children": [
+                    {
+                        "name": "install",
+                        "alias": "安装",
+                        "path": "/introduction/install"
+                    },
+                    {
+                        "name": "start",
+                        "alias": "快速上手",
+                        "path": "/introduction/start"
+                    }
+                ]
+            }
+        ],
+        "modules": [
+            {
+                "name": "basic",
+                "alias": "基础",
+                "children": [
+                    {
+                        "name": "icon",
+                        "alias": "icon图标",
+                        "path": "/components/basic/icon"
+                    }
+                ]
+            },
+            {
+                "name": "form",
+                "alias": "表单",
+                "children": [
+                    {
+                        "name": "button",
+                        "alias": "按钮",
+                        "path": "/components/form/button"
+                    },
+                    {
+                        "name": "form",
+                        "alias": "表单",
+                        "path": "/components/form/form"
+                    },
+                    {
+                        "name": "input",
+                        "alias": "输入框",
+                        "path": "/components/form/input"
+                    },
+                    {
+                        "name": "radio",
+                        "alias": "单选框",
+                        "path": "/components/form/radio"
+                    },
+                    {
+                        "name": "checkbox",
+                        "alias": "复选框",
+                        "path": "/components/form/checkbox"
+                    },
+                    {
+                        "name": "filter",
+                        "alias": "筛选",
+                        "path": "/components/form/filter"
+                    },
+                    {
+                        "name": "searchbar",
+                        "alias": "搜索框",
+                        "path": "/components/form/searchbar"
+                    },
+                    {
+                        "name": "picker",
+                        "alias": "选择器",
+                        "path": "/components/form/picker"
+                    },
+                    {
+                        "name": "date-picker",
+                        "alias": "日期选择器",
+                        "path": "/components/form/date-picker"
+                    }
+                ]
+            },
+            {
+                "name": "action",
+                "alias": "操作",
+                "children": [
+                    {
+                        "name": "popup",
+                        "alias": "弹出框",
+                        "path": "/components/action/popup"
+                    },
+                    {
+                        "name": "dialog",
+                        "alias": "弹窗",
+                        "path": "/components/action/dialog"
+                    },
+                    {
+                        "name": "notice-bar",
+                        "alias": "通告栏",
+                        "path": "/components/action/notice-bar"
+                    },
+                    {
+                        "name": "modal",
+                        "alias": "对话框",
+                        "path": "/components/action/modal"
+                    },
+                    {
+                        "name": "action-sheet",
+                        "alias": "动作面板",
+                        "path": "/components/action/action-sheet"
+                    },
+                    {
+                        "name": "overlay",
+                        "alias": "遮罩层",
+                        "path": "/components/action/overlay"
+                    }
+                ]
+            },
+            {
+                "name": "notice",
+                "alias": "提示",
+                "children": [
+                    {
+                        "name": "toast",
+                        "alias": "轻提示",
+                        "path": "/components/notice/toast"
+                    },
+                    {
+                        "name": "tooltips",
+                        "alias": "提示气泡",
+                        "path": "/components/notice/tooltips"
+                    },
+                    {
+                        "name": "loading",
+                        "alias": "加载",
+                        "path": "/components/notice/loading"
+                    }
+                ]
+            },
+            {
+                "name": "dataDisplay",
+                "alias": "Data Display",
+                "children": [
+                    {
+                        "name": "list",
+                        "alias": "列表",
+                        "path": "/components/dataDisplay/list"
+                    },
+                    {
+                        "name": "tag",
+                        "alias": "标签",
+                        "path": "/components/dataDisplay/tag"
+                    },
+                    {
+                        "name": "badge",
+                        "alias": "徽标",
+                        "path": "/components/dataDisplay/badge"
+                    },
+                    {
+                        "name": "carousel",
+                        "alias": "走马灯",
+                        "path": "/components/dataDisplay/carousel"
+                    },
+                    {
+                        "name": "steps",
+                        "alias": "步骤条",
+                        "path": "/components/dataDisplay/steps"
+                    },
+                    {
+                        "name": "progress",
+                        "alias": "进度条",
+                        "path": "/components/dataDisplay/progress"
+                    },
+                    {
+                        "name": "result-page",
+                        "alias": "结果页",
+                        "path": "/components/dataDisplay/result-page"
+                    },
+                    {
+                        "name": "scroll-refresh",
+                        "alias": "滚动刷新",
+                        "path": "/components/dataDisplay/scroll-refresh"
+                    }
+                ]
+            },
+            {
+                "name": "navigation",
+                "alias": "导航",
+                "children": [
+                    {
+                        "name": "tabs",
+                        "alias": "tabs选项卡",
+                        "path": "/components/navigation/tabs"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "packages",
+        "alias": "扩展组件",
+        "extendsRouter": [
+            {
+                "name": "packages-develop",
+                "alias": "开发指南",
+                "children": [
+                    {
+                        "name": "install",
+                        "alias": "安装",
+                        "path": "/packages/install"
+                    },
+                    {
+                        "name": "start",
+                        "alias": "快速上手",
+                        "path": "/packages/start"
+                    }
+                ]
+            }
+        ],
+        "modules": [
+            {
+                "name": "calendar",
+                "alias": "日历选择器",
+                "path": "/packages/calendar"
+            }
+        ]
+    }
+]

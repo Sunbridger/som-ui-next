@@ -1,0 +1,10 @@
+{
+  "useWorkspaces": true,
+  "packages": [
+    "packages/*"
+  ],
+  "forcePublish": true,
+  "yes": true,
+  "npmClient": "yarn",
+  "version": "0.1.0-beta.1"
+}

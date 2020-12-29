@@ -1,0 +1,16 @@
+{
+    "name": "@souche-ui/som-calendar-next",
+    "version": "0.1.0",
+    "description": "som-calendar",
+    "main": "./lib/index.js",
+    "repository": "https://git.souche-inc.com/souche-vue3/souche-ui/som-ui-next/tree/master/packages/calendar",
+    "author": "souchefe",
+    "license": "MIT",
+    "types": "index.d.ts",
+    "files": [
+        "src",
+        "lib",
+        "index.d.ts",
+        "index.js"
+    ]
+}

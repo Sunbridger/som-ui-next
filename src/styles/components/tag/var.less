@@ -1,0 +1,24 @@
+.som-tag {
+    --tag-selected-color: #F01D24;
+    --tag-selected-bg: #FEF2F2;
+    --tag-selected-border-color: #F78E91;
+
+    --tag-disable-color: #AFB2BA;
+    --tag-disable-bg: #F2F3F5;
+
+    --tag-primary-bg:#F7F8FA;
+    --tag-primary-color:#000;
+
+    @tag-size: {
+        normal: 36px 12px 16px;
+		medium: 28px 12px 12px;
+        small: 24px 12px 8px;
+        mini: 16px 10px 8px;
+        smini: 15px 10px 4px;
+    }
+    each(@tag-size, .(@v, @k) {
+        --tag-@{k}-height: extract(@v, 1);
+		--tag-@{k}-fs: extract(@v, 2);
+        --tag-@{k}-padding: extract(@v, 3);
+	})
+}

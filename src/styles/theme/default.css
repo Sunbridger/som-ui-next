@@ -1,0 +1,5 @@
+@import '~lemon/less/themes/default.css';
+
+:root {
+	--primary: #F01D24;
+}

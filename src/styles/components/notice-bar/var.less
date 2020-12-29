@@ -1,0 +1,24 @@
+.som-notice-bar {
+    --notice-bar-fs: 12px;
+    --notice-bar-fw: var(--font-weight-regular);
+    --notice-bar-mrl: 16px;
+    --notice-bar-line-height: 18px;
+    --notice-bar-border-radius: var(--border-radius-large);
+
+    --notice-bar-padding-x: 12px;
+    --notice-bar-padding-y: 9px;
+
+    @notice-bar-type: {
+        info: var(--primary) #FEF2F2;
+        warn: var(--text-title) var(--warning);
+        success: var(--success) var(--success-light-bg);
+    }
+    each(@notice-bar-type, .(@v,@k) {
+        --notice-bar-@{k}-color: extract(@v, 1);
+        --notice-bar-@{k}-bg: extract(@v, 2);
+    })
+
+    --notice-bar-text-atction-pd: 16px;
+    --notice-bar-text-icon-pd: 4px;
+}
+

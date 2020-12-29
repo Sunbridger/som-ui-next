@@ -1,0 +1,13 @@
+build
+dist
+doc
+public
+tests
+.browserslistrc
+.eslintignore
+.eslintrc
+.jest.config.js
+babel.config.js
+postcss.config.js
+vue.config.js
+vue.lib-config.js

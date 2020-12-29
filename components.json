@@ -1,0 +1,70 @@
+{
+    "namespace": "som",
+    "modules": [
+        {
+            "name": "basic",
+            "components": [
+                "icon"
+            ]
+        },
+        {
+            "name": "form",
+            "components": [
+                "button",
+                "form",
+                "form-item",
+                "input",
+                "radio",
+                "radio-group",
+                "checkbox",
+                "checkbox-group",
+                "filter",
+                "filter-item",
+                "searchbar",
+                "picker",
+                "date-picker"
+            ]
+        },
+        {
+            "name": "action",
+            "components": [
+                "popup",
+                "dialog",
+                "modal",
+                "action-sheet",
+                "notice-bar",
+                "overlay"
+            ]
+        },
+        {
+            "name": "notice",
+            "components": [
+                "toast",
+                "tooltips",
+                "loading"
+            ]
+        },
+        {
+            "name": "dataDisplay",
+            "components": [
+                "list",
+                "tag",
+                "badge",
+                "carousel",
+                "steps",
+                "progress"
+            ]
+        },
+        {
+            "name": "navigation",
+            "components": [
+                "tabs",
+                "result-page",
+                "scroll-refresh"
+            ]
+        }
+    ],
+    "packages": [
+        "calendar"
+    ]
+}

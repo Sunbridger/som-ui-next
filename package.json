@@ -1,0 +1,143 @@
+{
+  "name": "@souche-vue3/som-ui",
+  "version": "0.1.0",
+  "description": "som-ui",
+  "packages": [
+    "packages/*"
+  ],
+  "files": [
+    "src",
+    "lib",
+    "types",
+    "es"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "build:components": "node build/build-components",
+    "build:next": "node build/build-components-rollup",
+    "build:rollup": "rollup --config ./rollup.config.js",
+    "build:es": "rollup --config ./rollup.config.js && npm run build:next && npm run build:rollup -- --name config --input src/config/index.ts",
+    "build:deploy": "npm run build:doc && npm run build:lib && npm run build:es",
+    "build:doc": "vue-cli-service build",
+    "build:theme": "cp -r src/styles/theme lib/theme",
+    "build:lib": "npm run lib -- --name index --clean --entry src/index.ts && npm run build:components && npm run build:theme  && LIB=components npm run lib -- --name config --entry src/config/index.ts",
+    "lib": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.lib-config.js vue-cli-service lib --sourceMap",
+    "new": "node build/new",
+    "remove": "node build/remove",
+    "test:unit": "vue-cli-service test:unit --coverage",
+    "lint": "vue-cli-service lint"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "types/index.d.ts",
+  "style": "lib/styles/index.css",
+  "dependencies": {
+    "@souche-ui/lemon": "^1.0.0-beta.9",
+    "@souche-vue3/souche-svg-inject": "^0.0.1-beta.11",
+    "@souche-vue3/souche-util-vue": "^0.1.4",
+    "async-validator": "^3.4.0",
+    "core-js": "^3.6.5",
+    "throttle-debounce": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.7",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@souche-f2e/eslint-config-frontend": "^2.1.0",
+    "@souche-vue/component-doc-api-next": "^0.1.1-beta.0",
+    "@souche-vue/test-utils": "0.0.5",
+    "@souche-vue/vue-cli-plugin-unit-jest": "latest",
+    "@souche-vue3/eslint-config-formatter": "^0.0.6",
+    "@souche-vue3/formatter-prettier": "^0.0.2",
+    "@types/jest": "^24.0.19",
+    "@types/throttle-debounce": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-babel": "~4.5.6",
+    "@vue/cli-plugin-eslint": "~4.5.6",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
+    "@vue/cli-service": "^4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "@vue/test-utils": "^2.0.0-0",
+    "acorn-jsx": "^5.3.1",
+    "ant-design-vue": "^2.0.0-beta.10",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-component": "^1.1.1",
+    "cheerio": "^1.0.0-rc.2",
+    "eslint": "^7.12.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-markdown": "^1.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^7.1.0",
+    "highlight.js": "^9.15.6",
+    "inquirer": "^6.2.2",
+    "inquirer-autocomplete-prompt": "^1.0.1",
+    "jest-environment-jsdom": "^24.0.0",
+    "jest-environment-jsdom-global": "^1.1.1",
+    "json-templater": "^1.2.0",
+    "lerna": "^3.22.1",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^9.5.0",
+    "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.3.0",
+    "markdown-it-container": "^2.0.0",
+    "minimist": "^1.2.5",
+    "postcss-import": "^12.0.0",
+    "postcss-less": "^4.0.0",
+    "rollup": "^2.33.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-less": "^1.1.2",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-postcss-webpack-alias-less-loader": "^1.0.0",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "style-resources-loader": "^1.2.1",
+    "typescript": "~3.9.3",
+    "vue": "^3.0.0",
+    "vue-jest": "^5.0.0-0",
+    "vue-loader": "^15.9.3",
+    "vue-markdown-loader": "^2.4.1",
+    "vue-router": "^4.0.0-beta.12",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "prettier": "@souche-vue3/formatter-prettier",
+  "vuePlugins": {
+    "service": [
+      "build/lib"
+    ]
+  }
+}
